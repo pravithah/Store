@@ -6,50 +6,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+      color: #333;
     }
+
     header {
       background: #0a84ff;
       color: white;
-      padding: 20px;
-    }
-    nav a {
-      margin: 0 15px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .content {
       padding: 40px 20px;
+      text-align: center;
     }
-    .button {
-      display: inline-block;
-      padding: 12px 25px;
-      margin-top: 20px;
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    section {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+    .shop-btn {
       background: #0a84ff;
       color: white;
+      padding: 12px 24px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .shop-btn:hover {
+      background: #005fcc;
+    }
+
+    footer {
+      background: #222;
+      color: #aaa;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Welcome to Quarta Stores</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="buy.html">Shop</a>
-      <a href="https://wa.me/918590660839">Contact</a>
-    </nav>
+    <p>Your Smart Home Shopping Destination</p>
   </header>
-  <div class="content">
-    <h2>Smart Home Devices, Delivered Globally</h2>
-    <p>Browse our curated collection of innovative gadgets made to make your life smarter and easier.</p>
-    <a href="buy.html" class="button">Start Shopping</a>
+
+  <!-- Hero Banner -->
+  <div style="text-align:center;">
+    <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1350&q=80" alt="Smart Living" />
   </div>
+
+  <!-- Features Section -->
+  <section>
+    <h2>Top Smart Devices</h2>
+    <img src="https://images.unsplash.com/photo-1621371098489-79d7dc551fa2?auto=format&fit=crop&w=1350&q=80" alt="Smart Products" />
+    <p>Explore smart plugs, cameras, lights, and more – curated for your home automation needs.</p>
+    <a href="buy.html" class="shop-btn">Shop Now</a>
+  </section>
+
+  <!-- About Section -->
+  <section>
+    <h2>Why Choose Us?</h2>
+    <img src="https://images.unsplash.com/photo-1617957742084-e36d3f8cfd98?auto=format&fit=crop&w=1350&q=80" alt="Smart Home Lifestyle" />
+    <p>We offer globally sourced smart gadgets delivered to your door, with secure WhatsApp ordering.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Quarta Stores. All rights reserved.
+  </footer>
+
 </body>
 </html>
