@@ -1,200 +1,95 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Order Now - Quarta Stores</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Products - Quarta Stores</title>
   <style>
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
     }.navbar {
+  background-color: #0a84ff;
+  padding: 15px 30px;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background-color: #0a84ff;
-  color: white;
 }
 
 .navbar .logo {
   font-size: 24px;
   font-weight: bold;
-  text-align: center;
-  flex: 1;
 }
 
-.nav-links {
-  display: flex;
-  gap: 15px;
-}
-
-.nav-links a {
+.navbar a {
   color: white;
   text-decoration: none;
+  margin-left: 15px;
   font-size: 14px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background 0.3s;
 }
 
-.nav-links a:hover {
-  background-color: #0563c3;
-}
-
-header {
-  background-color: #ffffff;
-  color: #222;
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
   padding: 20px;
-  text-align: center;
-}
-
-h1 {
-  margin: 0;
-  font-size: 32px;
-}
-
-.products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 30px;
 }
 
-.product-card {
+.card {
   background-color: white;
   border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
-.product-card img {
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
   width: 100%;
-  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
 }
 
-.product-card h3 {
-  margin: 15px 0 10px;
-  font-size: 20px;
+.card-content {
+  padding: 15px;
 }
 
-.product-card p {
+.card h2 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.card p {
   font-size: 14px;
   color: #555;
-}
-
-.order-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 18px;
-  background-color: #0a84ff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.order-btn:hover {
-  background-color: #0563c3;
-}
-
-.form-container {
-  padding: 30px;
-  background-color: #ffffff;
-  max-width: 600px;
-  margin: 40px auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border-radius: 12px;
-}
-
-.form-container h2 {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-form input, form textarea, form select {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-}
-
-form button {
-  background-color: #0a84ff;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #0563c3;
-}
-
-footer {
-  background-color: #222;
-  color: #ccc;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
 }
 
   </style>
 </head>
 <body>
   <div class="navbar">
-    <div class="nav-links">
+    <div class="logo">Quarta Stores</div>
+    <div>
       <a href="index.html">Home</a>
       <a href="buy.html">Products</a>
     </div>
-    <div class="logo">Quarta Stores</div>
-    <div class="nav-links">
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>  <header>
-    <h1>Place Your Order</h1>
-  </header>  <div class="products">
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1616628182504-c6f1404e7f0c" alt="Smart Light">
-      <h3>Smart LED Light</h3>
-      <p>Control your lights from your phone. Colors, brightness, and more.</p>
-    </div>
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1620138543019-0808fba1d236" alt="Smart Plug">
-      <h3>Wi-Fi Smart Plug</h3>
-      <p>Turn any appliance smart. Schedule, voice control, and remote switch.</p>
-    </div>
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="Smart Camera">
-      <h3>Home Security Camera</h3>
-      <p>Monitor your home remotely with motion alerts and night vision.</p>
-    </div>
-  </div>  <div class="form-container">
-    <h2>Order Form</h2>
-    <form action="https://formsubmit.co/salythampy46@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="phone" placeholder="Phone Number" required>
-      <input type="text" name="address" placeholder="Delivery Address" required>
-      <select name="product">
-        <option value="Smart LED Light">Smart LED Light</option>
-        <option value="Wi-Fi Smart Plug">Wi-Fi Smart Plug</option>
-        <option value="Home Security Camera">Home Security Camera</option>
-      </select>
-      <textarea name="note" placeholder="Additional Notes"></textarea>
-      <button type="submit">Submit Order</button>
-    </form>
-  </div>  <footer>
-    &copy; 2025 Quarta Stores. All rights reserved.
-  </footer>
+  </div>  <div class="container">
+    <a href="product1.html" style="text-decoration: none; color: inherit;">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1616628182504-c6f1404e7f0c" alt="Smart LED Light">
+        <div class="card-content">
+          <h2>Smart LED Light</h2>
+          <p>Control your lights with your phone or voice. Smart, stylish, and energy efficient.</p>
+        </div>
+      </div>
+    </a>
+    <!-- Add more product cards here using the same structure -->
+  </div>
 </body>
 </html>
