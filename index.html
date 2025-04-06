@@ -32,6 +32,14 @@
     section {
       padding: 30px 20px;
       text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     section h2 {
@@ -90,7 +98,7 @@
   </div>
 
   <!-- Features Section -->
-  <section>
+  <section class="fade-in">
     <h2>Top Smart Devices</h2>
     <img src="https://images.unsplash.com/photo-1621371098489-79d7dc551fa2?auto=format&fit=crop&w=1350&q=80" alt="Smart Products" />
     <p>Explore smart plugs, cameras, lights, and more – curated for your home automation needs.</p>
@@ -98,7 +106,7 @@
   </section>
 
   <!-- About Section -->
-  <section>
+  <section class="fade-in">
     <h2>Why Choose Us?</h2>
     <img src="https://images.unsplash.com/photo-1617957742084-e36d3f8cfd98?auto=format&fit=crop&w=1350&q=80" alt="Smart Home Lifestyle" />
     <p>We offer globally sourced smart gadgets delivered to your door, with secure WhatsApp ordering.</p>
@@ -107,6 +115,24 @@
   <footer>
     &copy; 2025 Quarta Stores. All rights reserved.
   </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 
 </body>
 </html>
