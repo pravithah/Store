@@ -9,10 +9,44 @@
       background-color: #f2f2f2;
       margin: 0;
       padding: 0;
-    }header {
+    }.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
   background-color: #0a84ff;
   color: white;
-  padding: 30px;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #0563c3;
+}
+
+header {
+  background-color: #ffffff;
+  color: #222;
+  padding: 20px;
   text-align: center;
 }
 
@@ -116,7 +150,17 @@ footer {
   </style>
 </head>
 <body>
-  <header>
+  <div class="navbar">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="buy.html">Products</a>
+    </div>
+    <div class="logo">Quarta Stores</div>
+    <div class="nav-links">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>  <header>
     <h1>Place Your Order</h1>
   </header>  <div class="products">
     <div class="product-card">
