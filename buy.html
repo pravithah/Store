@@ -2,94 +2,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buy Products - Quarta Stores</title>
+  <title>Quarta Stores - Products</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f2f2;
-    }.navbar {
-  background-color: #0a84ff;
-  padding: 15px 30px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar .logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin-left: 15px;
-  font-size: 14px;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background-color: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 15px;
-}
-
-.card h2 {
-  font-size: 18px;
-  margin: 10px 0 5px;
-}
-
-.card p {
-  font-size: 14px;
-  color: #555;
-}
-
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .product {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .product:hover {
+      transform: scale(1.02);
+    }
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product h3 {
+      margin: 10px 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .product p {
+      font-size: 14px;
+      color: #666;
+    }
+    .buy-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #008CBA;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .buy-btn:hover {
+      background: #005f7f;
+    }
   </style>
 </head>
 <body>
-  <div class="navbar">
-    <div class="logo">Quarta Stores</div>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="buy.html">Products</a>
-    </div>
-  </div>  <div class="container">
-    <a href="product1.html" style="text-decoration: none; color: inherit;">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1616628182504-c6f1404e7f0c" alt="Smart LED Light">
-        <div class="card-content">
-          <h2>Smart LED Light</h2>
-          <p>Control your lights with your phone or voice. Smart, stylish, and energy efficient.</p>
-        </div>
-      </div>
-    </a>
-    <!-- Add more product cards here using the same structure -->
+  <h1>Welcome to Quarta Stores</h1>
+  <div class="grid">
+    <!-- 100 sample products from CJ Dropshipping --><!-- Sample (only a few shown for demo) -->
+<div class="product">
+  <img src="https://img.cjdropshipping.com/54F87103B28944C8AF9C5E1BFC2037F9.jpg" alt="Smart Light Bulb">
+  <h3>Smart Light Bulb</h3>
+  <p>WiFi-enabled RGB LED bulb, compatible with Alexa & Google Assistant.</p>
+  <button class="buy-btn" onclick="location.href='product1.html'">Buy Now</button>
+</div>
+
+<div class="product">
+  <img src="https://img.cjdropshipping.com/B25284F548784A508FC75A8E9B772460.jpg" alt="Portable Blender">
+  <h3>Portable Blender</h3>
+  <p>USB rechargeable mini blender for smoothies and shakes on the go.</p>
+  <button class="buy-btn" onclick="location.href='product2.html'">Buy Now</button>
+</div>
+
+<div class="product">
+  <img src="https://img.cjdropshipping.com/10E8A3E6F15143D29D6D10A48C22EDC6.jpg" alt="Wireless Earbuds">
+  <h3>Wireless Earbuds</h3>
+  <p>Noise-canceling Bluetooth earbuds with charging case and touch controls.</p>
+  <button class="buy-btn" onclick="location.href='product3.html'">Buy Now</button>
+</div>
+
+<div class="product">
+  <img src="https://img.cjdropshipping.com/C282D8E81D3F4E50802E231C20435570.jpg" alt="Smart Watch">
+  <h3>Smart Watch</h3>
+  <p>Fitness tracker with heart rate monitor, waterproof, long battery life.</p>
+  <button class="buy-btn" onclick="location.href='product4.html'">Buy Now</button>
+</div>
+
+<div class="product">
+  <img src="https://img.cjdropshipping.com/5EC4D7A51D1E445DBCB763D0A3F7B725.jpg" alt="LED Makeup Mirror">
+  <h3>LED Makeup Mirror</h3>
+  <p>Rechargeable light-up mirror with adjustable brightness and touch control.</p>
+  <button class="buy-btn" onclick="location.href='product5.html'">Buy Now</button>
+</div>
+
+<!-- Repeat more product blocks until you reach 100 -->
+
   </div>
 </body>
 </html>
