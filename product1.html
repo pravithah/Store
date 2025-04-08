@@ -1,132 +1,72 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart LED Light - Quarta Stores</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Sensor Night Light</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-    }.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0a84ff;
-  padding: 15px 30px;
-  color: white;
-}
-
-.navbar .logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin-left: 15px;
-  font-size: 14px;
-}
-
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.product-img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.6;
-}
-
-.buy-btn {
-  margin-top: 20px;
-  padding: 12px 20px;
-  font-size: 16px;
-  background-color: #0a84ff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.buy-btn:hover {
-  background-color: #0563c3;
-}
-
-#order-form {
-  margin-top: 30px;
-  display: none;
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-form button {
-  background-color: #0a84ff;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #0563c3;
-}
-
+      padding: 20px;
+      background: #f8f9fa;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .product-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    form {
+      margin-top: 30px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
   </style>
 </head>
 <body>
-  <div class="navbar">
-    <div class="logo">Quarta Stores</div>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="buy.html">Products</a>
-    </div>
-  </div>  <div class="container">
-    <img class="product-img" src="https://images.unsplash.com/photo-1616628182504-c6f1404e7f0c" alt="Smart LED Light">
-    <h1>Smart LED Light</h1>
-    <p>Experience the future of lighting with this smart LED light bulb. Control brightness and color through your phone or voice commands. Perfect for any room, energy-efficient and easy to set up.</p><button class="buy-btn" onclick="document.getElementById('order-form').style.display='block'">Buy Now</button>
+  <div class="container">
+    <img class="product-image" src="https://img.cjdropshipping.com/2f33f5a6-93b8-4b34-a95d-41c0f7a4b237.jpg" alt="Smart Sensor Night Light">
+    <h1>Smart Sensor Night Light</h1>
+    <p>This stylish night light is perfect for bathrooms, hallways, and bedrooms. It automatically turns on in the dark and off in the daylight, saving energy while providing soft lighting.</p>
+    <p><strong>Price:</strong> $9.99</p>
 
-<div id="order-form">
-  <h2>Order Form</h2>
-  <form action="https://formsubmit.co/salythampy46@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="text" name="phone" placeholder="Phone Number" required>
-    <input type="text" name="address" placeholder="Delivery Address" required>
-    <input type="hidden" name="product" value="Smart LED Light">
-    <textarea name="note" placeholder="Additional Notes"></textarea>
-    <button type="submit">Place Order</button>
-  </form>
-</div>
-
+    <form action="https://formsubmit.co/salythampy46@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Product Order - Smart Sensor Night Light">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="address" placeholder="Your Address" required></textarea>
+      <input type="number" name="quantity" placeholder="Quantity" min="1" required>
+      <button type="submit">Place Order</button>
+    </form>
   </div>
 </body>
-  </html>
+</html>
