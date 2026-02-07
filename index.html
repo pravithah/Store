@@ -1,36 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login / Details</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Login</title>
+  <style>
+    body {
+      background-color: #121212;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .container {
+      width: 320px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
 
   <div class="container">
     <h2>Login</h2>
 
-    <form>
+    <form onsubmit="return checkPassword()">
+
       <label>Name:</label>
-      <input type="text" placeholder="Enter your name">
+      <input type="text" required>
 
       <label>Gmail:</label>
-      <input type="email" placeholder="Enter your email">
+      <input type="email" required>
 
       <label>Password:</label>
-      <input type="password" placeholder="Enter your password">
+      <input type="password" id="password" required>
+
+      <label>Confirm Password:</label>
+      <input type="password" id="confirmPassword" required>
 
       <label>Address:</label>
-      <input type="text" placeholder="Enter your address">
+      <input type="text" required>
 
       <label>Pincode:</label>
-      <input type="number" placeholder="Enter pincode">
+      <input type="number" required>
 
       <label>Deliverable Address:</label>
-      <input type="text" placeholder="Enter delivery address">
+      <input type="text" required>
+
+      <div class="error" id="error"></div>
 
       <button type="submit">Submit</button>
     </form>
   </div>
+
+  <script>
+    function checkPassword() {
+      let pass = document.getElementById("password").value;
+      let confirmPass = document.getElementById("confirmPassword").value;
+      let error = document.getElementById("error");
+
+      if (pass.length < 6) {
+        error.textContent = "Password must be at least 6 characters";
+        return false;
+      }
+
+      if (pass !== confirmPass) {
+        error.textContent = "Passwords do not match";
+        return false;
+      }
+
+      alert("Password verified successfully ✅");
+      return true;
+    }
+  </script>
 
 </body>
 </html>
