@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Form Test</title>
+  <title>Order Form</title>
   <style>
     body {
       background-color: #121212;
@@ -34,25 +34,31 @@
       color: white;
       border: none;
       border-radius: 5px;
+      cursor: pointer;
     }
     .error {
       color: red;
       margin-top: 10px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <h2>Testing Form</h2>
+  <h2>Place Order</h2>
 
-  <form onsubmit="return sendEmail()">
+  <form
+    action="https://formsubmit.co/Salythampy46@gmail.com"
+    method="POST"
+    onsubmit="return checkPassword()"
+  >
 
     <label>Name:</label>
-    <input type="text" id="name" required>
+    <input type="text" name="Name" required>
 
     <label>Email:</label>
-    <input type="email" id="email" required>
+    <input type="email" name="Email" required>
 
     <label>Password:</label>
     <input type="password" id="password" required>
@@ -61,20 +67,43 @@
     <input type="password" id="confirmPassword" required>
 
     <label>Address:</label>
-    <input type="text" id="address" required>
+    <input type="text" name="Address" required>
 
     <label>Pincode:</label>
-    <input type="number" id="pincode" required>
+    <input type="number" name="Pincode" required>
 
     <label>Deliverable Address:</label>
-    <input type="text" id="delivery" required>
+    <input type="text" name="Deliverable Address" required>
+
+    <!-- FormSubmit settings -->
+    <input type="hidden" name="_subject" value="New Order Received">
+    <input type="hidden" name="_captcha" value="false">
 
     <div class="error" id="error"></div>
 
-    <button type="submit">Send Test Email</button>
+    <button type="submit">Send</button>
   </form>
 </div>
 
 <script>
-function sendEmail() {
-  let pass = password.value
+function checkPassword() {
+  let pass = document.getElementById("password").value;
+  let confirmPass = document.getElementById("confirmPassword").value;
+  let error = document.getElementById("error");
+
+  if (pass.length < 6) {
+    error.textContent = "Password must be at least 6 characters";
+    return false;
+  }
+
+  if (pass !== confirmPass) {
+    error.textContent = "Passwords do not match";
+    return false;
+  }
+
+  return true; // allow email to be sent
+}
+</script>
+
+</body>
+</html>
