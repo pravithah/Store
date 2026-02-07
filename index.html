@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
+  <title>Form Test</title>
   <style>
     body {
       background-color: #121212;
-      font-family: Arial, sans-serif;
+      font-family: Arial;
       color: white;
     }
-
     .container {
-      width: 320px;
-      margin: 50px auto;
+      width: 330px;
+      margin: 40px auto;
       padding: 20px;
       background-color: #1e1e1e;
       border-radius: 10px;
     }
-
-    h2 {
-      text-align: center;
-    }
-
     label {
       display: block;
       margin-top: 10px;
     }
-
     input {
       width: 100%;
       padding: 8px;
@@ -33,7 +26,6 @@
       border-radius: 5px;
       border: none;
     }
-
     button {
       width: 100%;
       margin-top: 15px;
@@ -42,74 +34,47 @@
       color: white;
       border: none;
       border-radius: 5px;
-      cursor: pointer;
     }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
     .error {
       color: red;
-      font-size: 14px;
       margin-top: 10px;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h2>Login</h2>
+<div class="container">
+  <h2>Testing Form</h2>
 
-    <form onsubmit="return checkPassword()">
+  <form onsubmit="return sendEmail()">
 
-      <label>Name:</label>
-      <input type="text" required>
+    <label>Name:</label>
+    <input type="text" id="name" required>
 
-      <label>Gmail:</label>
-      <input type="email" required>
+    <label>Email:</label>
+    <input type="email" id="email" required>
 
-      <label>Password:</label>
-      <input type="password" id="password" required>
+    <label>Password:</label>
+    <input type="password" id="password" required>
 
-      <label>Confirm Password:</label>
-      <input type="password" id="confirmPassword" required>
+    <label>Confirm Password:</label>
+    <input type="password" id="confirmPassword" required>
 
-      <label>Address:</label>
-      <input type="text" required>
+    <label>Address:</label>
+    <input type="text" id="address" required>
 
-      <label>Pincode:</label>
-      <input type="number" required>
+    <label>Pincode:</label>
+    <input type="number" id="pincode" required>
 
-      <label>Deliverable Address:</label>
-      <input type="text" required>
+    <label>Deliverable Address:</label>
+    <input type="text" id="delivery" required>
 
-      <div class="error" id="error"></div>
+    <div class="error" id="error"></div>
 
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+    <button type="submit">Send Test Email</button>
+  </form>
+</div>
 
-  <script>
-    function checkPassword() {
-      let pass = document.getElementById("password").value;
-      let confirmPass = document.getElementById("confirmPassword").value;
-      let error = document.getElementById("error");
-
-      if (pass.length < 6) {
-        error.textContent = "Password must be at least 6 characters";
-        return false;
-      }
-
-      if (pass !== confirmPass) {
-        error.textContent = "Passwords do not match";
-        return false;
-      }
-
-      alert("Password verified successfully ✅");
-      return true;
-    }
-  </script>
-
-</body>
-</html>
+<script>
+function sendEmail() {
+  let pass = password.value
